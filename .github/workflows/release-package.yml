@@ -11,7 +11,7 @@ jobs:
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v1
         with:
-          node-version: "14.17"
+          node-version: "16.14"
       # PNPM Cache
       - run: npm i --global pnpm
       - name: Cache pnpm store
@@ -21,9 +21,6 @@ jobs:
         with:
           path: ~/.pnpm-store/
           key: ${{ runner.os }}-build-${{ env.cache-name }}
-      # Set login for package registries
-      - run: npm set //registry.npmjs.org/:_authToken=${{secrets.NPMJS_TOKEN}}
-      - run: npm set //npm.pkg.github.com/:_authToken=${{secrets.GPR_TOKEN}}
       # Install
       - run: pnpm i
       # Publish NPMJS

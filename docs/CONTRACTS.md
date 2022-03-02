@@ -1,5 +1,7 @@
 # Contracts
 
+TODO: Add doc links.
+
 ## Directory Structure
 
 ```
@@ -21,22 +23,22 @@ These smart contracts can be imported as a dependency in various ways described 
 
 ### Solidity
 
-The solidity smart contracts themselves can simply be imported via the `solidity` directory of `@leovigna/solidity-starter`.
+The solidity smart contracts themselves can simply be imported via the `solidity` directory of `@owlprotocol/solidity-starter`.
 
 ```solidity
-import "@leovigna/solidity-starter/solidity/Example.sol";
+import "@owlprotocol/solidity-starter/solidity/Example.sol";
 ```
 
 ### JSON Artifacts
 
 ```typescript
-import ExampleArtifact from '@leovigna/solidity-starter/abi/Example.json';
+import ExampleArtifact from '@owlprotocol/solidity-starter/abi/Example.json';
 ```
 
 ### Ethers
 
 ```typescript
-import ExampleEthers from '@leovigna/solidity-starter/ethers/Example';
+import ExampleEthers from '@owlprotocol/solidity-starter/ethers/Example';
 const example = ExampleEthers.attach(deployed.address).connect(
     new ethers.providers.JsonRpcProvider('http://localhost:8545'),
 );
@@ -45,13 +47,13 @@ const example = ExampleEthers.attach(deployed.address).connect(
 ### Truffle
 
 ```typescript
-import ExampleTruffle from '@leovigna/solidity-starter/truffle/Example';
+import ExampleTruffle from '@owlprotocol/solidity-starter/truffle/Example';
 const example = await ExampleTruffle.new();
 ```
 
 ### Web3
 
 ```typescript
-import ExampleWeb3 from '@leovigna/solidity-starter/web3/Example';
+import ExampleWeb3 from '@owlprotocol/solidity-starter/web3/Example';
 const example = ExampleWeb3(web3);
 ```

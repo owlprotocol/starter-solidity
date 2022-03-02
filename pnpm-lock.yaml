@@ -34,12 +34,13 @@ specifiers:
   npm-run-all: ^4.1.5
   prettier: ^2.3.2
   rimraf: ^3.0.2
+  solc-0.8: npm:solc@^0.8.0
   solidity-docgen: ^0.5.13
   truffle: 5.4.14
   ts-node: ^10.2.1
   typechain: ^5.1.2
-  typedoc: ^0.21.5
-  typedoc-neo-theme: ^1.1.0
+  typedoc: ^0.22.11
+  typedoc-plugin-markdown: ^3.11.14
   typescript: ^4.3.5
   web3: ^1.5.2
   web3-core: ^1.5.1
@@ -82,12 +83,13 @@ devDependencies:
   npm-run-all: 4.1.5
   prettier: 2.4.1
   rimraf: 3.0.2
+  solc-0.8: /solc/0.8.12
   solidity-docgen: 0.5.16
   truffle: 5.4.14_@types+node@16.11.4
   ts-node: 10.4.0_bada05a3e1cd24c0fc5f82f6eaa2ca15
   typechain: 5.2.0_typescript@4.4.4
-  typedoc: 0.21.9_typescript@4.4.4
-  typedoc-neo-theme: 1.1.1_typescript@4.4.4
+  typedoc: 0.22.12_typescript@4.4.4
+  typedoc-plugin-markdown: 3.11.14_typedoc@0.22.12
   typescript: 4.4.4
   web3: 1.6.0
   web3-core: 1.6.0
@@ -8099,7 +8101,6 @@ packages:
       debug:
         optional: true
     dev: true
-    optional: true
 
   /for-each/0.3.3:
     resolution: {integrity: sha512-jqYfLp7mo9vIyQf8ykW2v7A+2N4QjeCeI5+Dz9XraiO1ign81wjiH7Fb9vSOWvQfNtmSa4H2RoQTrrXivdUZmw==}
@@ -11087,14 +11088,8 @@ packages:
     hasBin: true
     dev: true
 
-  /marked/2.0.7:
-    resolution: {integrity: sha512-BJXxkuIfJchcXOJWTT2DOL+yFWifFv2yGYOUzvXg8Qz610QKw+sHCvTMYwA+qWGhlA2uivBezChZ/pBy1tWdkQ==}
-    engines: {node: '>= 8.16.2'}
-    hasBin: true
-    dev: true
-
-  /marked/3.0.7:
-    resolution: {integrity: sha512-ctKqbnLuNbsHbI26cfMyOlKgXGfl1orOv1AvWWDX7AkgfMOwCWvmuYc+mVLeWhQ9W6hdWVBynOs96VkcscKo0Q==}
+  /marked/4.0.12:
+    resolution: {integrity: sha512-hgibXWrEDNBWgGiK18j/4lkS6ihTe9sxtV4Q1OQppb/0zzyPSzoFANBa5MfsG/zgsWklmNnhm0XACZOH/0HBiQ==}
     engines: {node: '>= 12'}
     hasBin: true
     dev: true
@@ -12215,12 +12210,6 @@ packages:
     engines: {node: '>=6'}
     dependencies:
       mimic-fn: 2.1.0
-    dev: true
-
-  /onigasm/2.2.5:
-    resolution: {integrity: sha512-F+th54mPc0l1lp1ZcFMyL/jTs2Tlq4SqIHKIXGZOR/VkHkF9A7Fr5rRr5+ZG/lWeRsyrClLYRq7s/yFQ/XhWCA==}
-    dependencies:
-      lru-cache: 5.1.1
     dev: true
 
   /opencollective-postinstall/2.0.3:
@@ -13543,13 +13532,6 @@ packages:
     dev: true
     optional: true
 
-  /rechoir/0.6.2:
-    resolution: {integrity: sha1-hSBLVNuoLVdC4oyWdW70OvUOM4Q=}
-    engines: {node: '>= 0.10'}
-    dependencies:
-      resolve: 1.20.0
-    dev: true
-
   /redux-devtools-core/0.2.1:
     resolution: {integrity: sha512-RAGOxtUFdr/1USAvxrWd+Gq/Euzgw7quCZlO5TgFpDfG7rB5tMhZUrNyBjpzgzL2yMk0eHnPYIGm7NkIfRzHxQ==}
     deprecated: Package moved to @redux-devtools/app.
@@ -14245,21 +14227,11 @@ packages:
     resolution: {integrity: sha512-Vpfqwm4EnqGdlsBFNmHhxhElJYrdfcxPThu+ryKS5J8L/fhAwLazFZtq+S+TWZ9ANj2piSQLGj6NQg+lKPmxrw==}
     dev: true
 
-  /shelljs/0.8.4:
-    resolution: {integrity: sha512-7gk3UZ9kOfPLIAbslLzyWeGiEqx9e3rxwZM0KE6EL8GlGwjym9Mrlx5/p33bWTu9YG6vcS4MBxYZDHYr5lr8BQ==}
-    engines: {node: '>=4'}
-    hasBin: true
-    dependencies:
-      glob: 7.2.0
-      interpret: 1.4.0
-      rechoir: 0.6.2
-    dev: true
-
-  /shiki/0.9.12:
-    resolution: {integrity: sha512-VXcROdldv0/Qu0w2XvzU4IrvTeBNs/Kj/FCmtcEXGz7Tic/veQzliJj6tEiAgoKianhQstpYmbPDStHU5Opqcw==}
+  /shiki/0.10.1:
+    resolution: {integrity: sha512-VsY7QJVzU51j5o1+DguUd+6vmCmZ5v/6gYu4vyYAhzjuNQU6P/vmSy4uQaOhvje031qQMiW0d2BwgMH52vqMng==}
     dependencies:
       jsonc-parser: 3.0.0
-      onigasm: 2.2.5
+      vscode-oniguruma: 1.6.2
       vscode-textmate: 5.2.0
     dev: true
 
@@ -14410,6 +14382,22 @@ packages:
       require-from-string: 2.0.2
       semver: 5.7.1
       tmp: 0.0.33
+    dev: true
+
+  /solc/0.8.12:
+    resolution: {integrity: sha512-TU3anAhKWBQ/WrerJ9EcHrNwGOA1y5vIk5Flz7dBNamLDkX9VQTIwcKd3FiZsT0Ew8rSU7RTmJyGNHRGzP5TBA==}
+    engines: {node: '>=10.0.0'}
+    hasBin: true
+    dependencies:
+      command-exists: 1.2.9
+      commander: 8.3.0
+      follow-redirects: 1.14.4
+      js-sha3: 0.8.0
+      memorystream: 0.3.1
+      semver: 5.7.1
+      tmp: 0.0.33
+    transitivePeerDependencies:
+      - debug
     dev: true
 
   /solidity-comments-extractor/0.0.7:
@@ -15468,57 +15456,27 @@ packages:
     resolution: {integrity: sha1-hnrHTjhkGHsdPUfZlqeOxciDB3c=}
     dev: true
 
-  /typedoc-default-themes/0.12.10:
-    resolution: {integrity: sha512-fIS001cAYHkyQPidWXmHuhs8usjP5XVJjWB8oZGqkTowZaz3v7g3KDZeeqE82FBrmkAnIBOY3jgy7lnPnqATbA==}
-    engines: {node: '>= 8'}
-    dev: true
-
-  /typedoc-neo-theme/1.1.1_typescript@4.4.4:
-    resolution: {integrity: sha512-J20vYx72bGdhTDMFPK6vhtsisKwxm4B+O6H2MTCb3/gwXRLFWFUk+N7I78t5LhHKhUcM0nRDidZykQ5r/0AY6w==}
-    engines: {node: '>=6'}
-    dependencies:
-      lunr: 2.3.9
-      typedoc: 0.20.37_typescript@4.4.4
-    transitivePeerDependencies:
-      - typescript
-    dev: true
-
-  /typedoc/0.20.37_typescript@4.4.4:
-    resolution: {integrity: sha512-9+qDhdc4X00qTNOtii6QX2z7ndAeWVOso7w3MPSoSJdXlVhpwPfm1yEp4ooKuWA9fiQILR8FKkyjmeqa13hBbw==}
-    engines: {node: '>= 10.8.0'}
-    hasBin: true
+  /typedoc-plugin-markdown/3.11.14_typedoc@0.22.12:
+    resolution: {integrity: sha512-lh47OQvl0079nB18YL9wuTRRhMpjo300SZKfx/xpQY8qG+GINeSxTod95QBELeI0NP81sNtUbemRDrn5nyef4Q==}
     peerDependencies:
-      typescript: 3.9.x || 4.0.x || 4.1.x || 4.2.x
+      typedoc: '>=0.22.0'
     dependencies:
-      colors: 1.4.0
-      fs-extra: 9.1.0
       handlebars: 4.7.7
-      lodash: 4.17.21
-      lunr: 2.3.9
-      marked: 2.0.7
-      minimatch: 3.0.4
-      progress: 2.0.3
-      shelljs: 0.8.4
-      shiki: 0.9.12
-      typedoc-default-themes: 0.12.10
-      typescript: 4.4.4
+      typedoc: 0.22.12_typescript@4.4.4
     dev: true
 
-  /typedoc/0.21.9_typescript@4.4.4:
-    resolution: {integrity: sha512-VRo7aII4bnYaBBM1lhw4bQFmUcDQV8m8tqgjtc7oXl87jc1Slbhfw2X5MccfcR2YnEClHDWgsiQGgNB8KJXocA==}
+  /typedoc/0.22.12_typescript@4.4.4:
+    resolution: {integrity: sha512-FcyC+YuaOpr3rB9QwA1IHOi9KnU2m50sPJW5vcNRPCIdecp+3bFkh7Rq5hBU1Fyn29UR2h4h/H7twZHWDhL0sw==}
     engines: {node: '>= 12.10.0'}
     hasBin: true
     peerDependencies:
-      typescript: 4.0.x || 4.1.x || 4.2.x || 4.3.x || 4.4.x
+      typescript: 4.0.x || 4.1.x || 4.2.x || 4.3.x || 4.4.x || 4.5.x
     dependencies:
       glob: 7.2.0
-      handlebars: 4.7.7
       lunr: 2.3.9
-      marked: 3.0.7
+      marked: 4.0.12
       minimatch: 3.0.4
-      progress: 2.0.3
-      shiki: 0.9.12
-      typedoc-default-themes: 0.12.10
+      shiki: 0.10.1
       typescript: 4.4.4
     dev: true
 
@@ -15957,6 +15915,10 @@ packages:
 
   /vm-browserify/1.1.2:
     resolution: {integrity: sha512-2ham8XPWTONajOR0ohOKOHXkm3+gaBmGut3SRuu75xLd/RRaY6vqgh8NBYYk7+RW3u5AtzPQZG8F10LHkl0lAQ==}
+    dev: true
+
+  /vscode-oniguruma/1.6.2:
+    resolution: {integrity: sha512-KH8+KKov5eS/9WhofZR8M8dMHWN2gTxjMsG4jd04YhpbPR91fUj7rYQ2/XjeHCJWbg7X++ApRIU9NUwM2vTvLA==}
     dev: true
 
   /vscode-textmate/5.2.0:

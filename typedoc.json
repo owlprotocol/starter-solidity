@@ -1,7 +1,7 @@
 {
     "entryPoints": ["src"],
-    "out": "docs",
+    "out": "docs/typescript",
     "includeVersion": true,
-    "theme": "./node_modules/typedoc-neo-theme/bin/default",
-    "plugin": "typedoc-neo-theme"
+    "plugin": "typedoc-plugin-markdown",
+    "readme": "none"
 }
