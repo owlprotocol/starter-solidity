@@ -3,6 +3,7 @@
 #hardhat compile
 /artifacts
 /cache
+/typechain
 
 # auto-generated
 src/types/ethers
