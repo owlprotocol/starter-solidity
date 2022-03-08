@@ -10,6 +10,9 @@
     "copyright": "Copyright 2021 Owl Protocol",
     "license": "MIT",
     "scripts": {
+        "hardhat:compile": "npx hardhat compile",
+        "hardhat:deploy:localhost": "npx hardhat run --network localhost scripts/deploy.ts",
+        "hardhat:node": "npx hardhat node",
         "clean": "npm-run-all -p clean:lib clean:abi clean:types clean:factory",
         "clean:lib": "rimraf lib",
         "clean:abi": "rimraf src/abi/*.json src/abi/*.json",
