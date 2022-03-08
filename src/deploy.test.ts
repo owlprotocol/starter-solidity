@@ -1,8 +1,8 @@
-import { getWeb3 } from './utils/getWeb3';
+import { getWeb3 } from '../utils/getWeb3';
 import { deploy, contracts } from './deploy';
-import { HD_WALLET_MNEMONIC, PRIVATE_KEYS } from './utils/environment';
-import { configureGanacheMemo } from './utils/configureGanache';
-import setProvider from './utils/setProvider';
+import { HD_WALLET_MNEMONIC, PRIVATE_KEYS } from '../utils/environment';
+import { configureGanacheMemo } from '../utils/configureGanache';
+import setProvider from '../utils/setProvider';
 
 describe('deploy', function () {
     const privateKey = PRIVATE_KEYS![0];

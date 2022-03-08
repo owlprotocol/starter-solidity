@@ -1,6 +1,6 @@
 import Example from './truffle/Example';
-import { getWeb3Default } from './utils/getWeb3';
-import setProvider from './utils/setProvider';
+import { getWeb3Default } from '../utils/getWeb3';
+import setProvider from '../utils/setProvider';
 import { toBN } from 'web3-utils';
 
 //Set Web3 provider
