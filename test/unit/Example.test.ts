@@ -3,7 +3,6 @@ import { artifacts, ethers, web3 } from 'hardhat';
 import { AbiItem } from 'web3-utils';
 const ExampleTruffle = artifacts.require('Example');
 import ExampleAbi from '../../artifacts/contracts/Example/Example.sol/Example.json';
-import { Example } from '../../typechain/Example';
 
 describe('Example', function () {
     let exampleContr: any;
