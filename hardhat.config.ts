@@ -21,7 +21,7 @@ const config: HardhatUserConfig = {
     },
     typechain: {
         outDir: 'typechain', //default
-        target: 'web3-v1',
+        target: 'web3-v1', //All options: ethers-v5, web3-v1, truffle-v5
     },
 };
 
